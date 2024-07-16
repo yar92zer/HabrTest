@@ -35,7 +35,7 @@ public class MainPageTest {
 
     @Test
     public void changeLogTest() {
-        WebElement userIcon = driver.findElement(By.cssSelector("svg[data-test-id='menu-toggle-user'] "));
+        WebElement userIcon = driver.findElement(By.xpath("//*[contains(text(),'Устройство сайта')]"));
         userIcon.click();
 
         WebElement rulesLink = driver.findElement(By.xpath("//*[contains(text(),'Правила сайта')]"));
