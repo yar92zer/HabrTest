@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.List;
 
 public class MainPageTest {
     private WebDriver driver;
@@ -43,6 +44,31 @@ public class MainPageTest {
 
         assertTrue(driver.findElement(By.xpath("//*[contains(text(),'Changelog')]")).isDisplayed(),"Changelog не найден");
     }
+
+    @Test
+    public void LogTest() {
+        WebElement newXab = driver.findElement(By.xpath("//*[contains(text(),'Хабы')]"));
+        newXab.click();
+
+        assertTrue(driver.findElement(By.xpath("//*[contains(text(),'Предложить хаб')]")).isDisplayed(),"Предложить хаб не найден");
+
+        WebElement elMenu = driver.findElement(By.xpath("//*[contains(text(),'Предложить хаб')]"));
+        elMenu.click();
+
+
+    }
+    @Test
+    public void testButton() {
+        WebElement newHab = driver.findElement(By.xpath("//*[contains(text(),'Хабы')]"));
+        newHab.click();
+
+        WebElement upHab = driver.findElement(By.xpath("//*[contains(text(),'Предложить хаб')]"));
+        upHab.click();
+
+        assertTrue(driver.findElement(By.xpath("//*[contains(text(),'Отправить')]")).isDisplayed(),"Отправить не найден");
+
+    }
+
 
 
 }
