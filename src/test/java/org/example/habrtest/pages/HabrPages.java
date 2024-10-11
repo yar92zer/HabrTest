@@ -17,15 +17,8 @@ public class HabrPages {
     @FindBy(xpath = "//a[contains(text(),'Устройство сайта')]")
     private WebElement siteDeviceButton;
 
-    @FindBy(xpath = "//*[contains(text(),'Правила сайта')]")
-    private WebElement siteRulesButton;
-
     @FindBy(xpath = "//*[contains(text(),'Хабы')]")
     private WebElement hubsButton;
-
-    @FindBy(xpath = "//*[contains(text(),'Предложить хаб')]")
-    private WebElement suggestHubButton;
-
 
     @FindBy(xpath = "//a[contains(text(),'Войти')]")
     private WebElement sendHubButton;
@@ -188,20 +181,11 @@ public class HabrPages {
         return siteDeviceButton.isEnabled();
     }
 
-    public boolean getSiteRulesIsActive() {
-        LOG.info("Проверка доступности кнопки Правила сайта");
-        return siteRulesButton.isEnabled();
-    }
-
     public boolean getHubsIsActive() {
         LOG.info("Проверка доступности кнопки Хабы");
         return hubsButton.isEnabled();
     }
 
-    public boolean getSuggestHubIsActive() {
-        LOG.info("Проверка доступности кнопки Предложить хаб");
-        return suggestHubButton.isEnabled();
-    }
 
     public String siteDeviceTransition() {
         LOG.info("Переход на страницу Устройство сайта");
