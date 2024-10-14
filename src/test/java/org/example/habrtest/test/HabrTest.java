@@ -162,7 +162,7 @@ public class HabrTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка перехода в раздел Changelog")
-    public void ChangelogTest() {
+    public void changelogTest() {
         String expectedUrl = "https://habr.com/ru/docs/changelog/";
         HabrP.siteDeviceTransition();
         String actualUrl = HabrTP.getChangeLogTeamTransition();
@@ -171,7 +171,7 @@ public class HabrTest extends BaseTest {
 
     @Test
     @DisplayName("Открытие страницы Хабы")
-    public void HubsTest() {
+    public void hubsTest() {
         String expectedUrl = "https://habr.com/ru/hubs/";
         String actualUrl = HabrTP.getHubsTeamTransition();
         assertEquals(expectedUrl, actualUrl, "Итоговый URL не соответствует ожидаемому");
