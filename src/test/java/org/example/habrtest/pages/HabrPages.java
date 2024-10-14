@@ -1,6 +1,6 @@
 package org.example.habrtest.pages;
 
-import org.example.habrtest.test.AllureLoggerCustom;
+import org.example.habrtest.AllureLoggerCustom;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -136,7 +136,7 @@ public class HabrPages {
     }
 
 
-    public boolean getForTheAuthorsIsIsActive() {
+    public boolean getForTheAuthorsIsActive() {
         LOG.info("Проверка доступности кнопки Для авторов");
         return forTheAuthorsButton.isDisplayed();
     }

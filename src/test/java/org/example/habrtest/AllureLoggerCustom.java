@@ -1,4 +1,4 @@
-package org.example.habrtest.test;
+package org.example.habrtest;
 
 import io.qameta.allure.Step;
 import org.slf4j.Logger;

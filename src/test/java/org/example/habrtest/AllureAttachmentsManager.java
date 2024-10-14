@@ -1,6 +1,7 @@
-package org.example.habrtest.test;
+package org.example.habrtest;
 
 import io.qameta.allure.Attachment;
+import org.example.habrtest.test.BaseTest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 

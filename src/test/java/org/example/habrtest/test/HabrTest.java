@@ -7,6 +7,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.example.habrtest.MyExtension;
+
+import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -82,7 +85,7 @@ public class HabrTest extends BaseTest {
     @Test
     @DisplayName("Проверка активности кнопки  Для авторов")
     public void forTheAuthorsIsActive() {
-        Assertions.assertTrue(HabrP.getForTheAuthorsIsIsActive(), " Для авторов кнопка кнопка не активна");
+        Assertions.assertTrue(HabrP.getForTheAuthorsIsActive(), " Для авторов кнопка кнопка не активна");
     }
 
     @Test

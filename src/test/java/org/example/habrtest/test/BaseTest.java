@@ -1,5 +1,6 @@
 package org.example.habrtest.test;
 
+import org.example.habrtest.AllureLoggerCustom;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.PageLoadStrategy;
