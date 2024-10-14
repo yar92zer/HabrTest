@@ -1,5 +1,6 @@
 package org.example.habrtest.test;
 
+import org.example.habrtest.MyExtension;
 import org.example.habrtest.pages.HabrPages;
 import org.example.habrtest.pages.HabrTeamsPage;
 import org.junit.jupiter.api.Assertions;
@@ -7,9 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.example.habrtest.MyExtension;
-
-import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
