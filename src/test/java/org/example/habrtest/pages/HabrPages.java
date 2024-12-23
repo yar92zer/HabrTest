@@ -1,81 +1,58 @@
 package org.example.habrtest.pages;
 
+import com.codeborne.selenide.SelenideElement;
 import org.example.habrtest.AllureLoggerCustom;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.slf4j.LoggerFactory;
 
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.*;
 
 // https://habr.com/ru/feed/
 public class HabrPages {
 
     private final AllureLoggerCustom LOG = new AllureLoggerCustom(LoggerFactory.getLogger(HabrPages.class));
-    WebDriver driver;
 
-    @FindBy(xpath = "//a[contains(text(),'Устройство сайта')]")
-    private WebElement siteDeviceButton;
+    private final SelenideElement siteDeviceButton = $x("//a[contains(text(),'Устройство сайта')]");
 
-    @FindBy(xpath = "//*[contains(text(),'Хабы')]")
-    private WebElement hubsButton;
+    private final SelenideElement hubsButton = $x("//*[contains(text(),'Хабы')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Войти')]")
-    private WebElement sendHubButton;
+    private final SelenideElement sendHubButton = $x("//a[contains(text(),'Войти')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Регистрация')]")
-    private WebElement registrationButton;
+    private final SelenideElement registrationButton = $x("//a[contains(text(),'Регистрация')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Статьи')]")
-    private WebElement articlesButton;
+    private final SelenideElement articlesButton = $x("//a[contains(text(),'Статьи')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Новости')]")
-    private WebElement newsButton;
+    private final SelenideElement newsButton = $x("//a[contains(text(),'Новости')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Компании')]")
-    private WebElement companiesButton;
+    private final SelenideElement companiesButton = $x("//a[contains(text(),'Компании')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Авторы')]")
-    private WebElement authorsButton;
+    private final SelenideElement authorsButton = $x("//a[contains(text(),'Авторы')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Песочница')]")
-    private WebElement sandboxButton;
+    private final SelenideElement sandboxButton = $x("//a[contains(text(),'Песочница')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Для авторов')]")
-    private WebElement forTheAuthorsButton;
+    private final SelenideElement forTheAuthorsButton = $x("//a[contains(text(),'Для авторов')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Для компаний')]")
-    private WebElement forCompaniesButton;
+    private final SelenideElement forCompaniesButton = $x("//a[contains(text(),'Для компаний')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Документы')]")
-    private WebElement papersButton;
+    private final SelenideElement papersButton = $x("//a[contains(text(),'Документы')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Соглашение')]")
-    private WebElement agreementButton;
+    private final SelenideElement agreementButton = $x("//a[contains(text(),'Соглашение')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Конфиденциальность')]")
-    private WebElement privacyButton;
+    private final SelenideElement privacyButton = $x("//a[contains(text(),'Конфиденциальность')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Корпоративный блог')]")
-    private WebElement corporateBlogButton;
+    private final SelenideElement corporateBlogButton = $x("//a[contains(text(),'Корпоративный блог')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Медийная реклама')]")
-    private WebElement mediaAdvertisingButton;
+    private final SelenideElement mediaAdvertisingButton = $x("//a[contains(text(),'Медийная реклама')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Нативные проекты')]")
-    private WebElement nativeProjectsButton;
+    private final SelenideElement nativeProjectsButton = $x("//a[contains(text(),'Нативные проекты')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Образовательные программы')]")
-    private WebElement educationalProgramsButton;
+    private final SelenideElement educationalProgramsButton = $x("//a[contains(text(),'Образовательные программы')]");
 
-    @FindBy(xpath = "//a[contains(text(),'Стартапам')]")
-    private WebElement startupsButton;
+    private final SelenideElement startupsButton = $x("//a[contains(text(),'Стартапам')]");
 
-    @FindBy(xpath = "//a[@class='tm-footer__link']")
-    private WebElement supportButton;
+    private final SelenideElement supportButton = $x("//a[@class='tm-footer__link']");
 
-    @FindBy(xpath = "//button[@class='tm-footer__link']")
-    private WebElement languageCustomizationButton;
+    private final SelenideElement languageCustomizationButton = $x("//button[@class='tm-footer__link']");
 
 
     public boolean getLanguageCustomIsActiv() {
@@ -178,25 +155,20 @@ public class HabrPages {
 
     public boolean getSiteDeviceIsActive() {
         LOG.info("Проверка доступности кнопки Устройство сайта");
-        return siteDeviceButton.isEnabled();
+        return siteDeviceButton.isDisplayed();
     }
 
     public boolean getHubsIsActive() {
         LOG.info("Проверка доступности кнопки Хабы");
-        return hubsButton.isEnabled();
+        return hubsButton.isDisplayed();
     }
 
 
     public String siteDeviceTransition() {
         LOG.info("Переход на страницу Устройство сайта");
+        siteDeviceButton.shouldBe(visible);
         siteDeviceButton.click();
-        return driver.getCurrentUrl();
+        sleep(1000);
+        return webdriver().driver().url();
     }
-
-    public HabrPages(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
-
-
 }
