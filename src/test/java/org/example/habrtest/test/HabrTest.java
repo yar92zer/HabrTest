@@ -29,8 +29,8 @@ public class HabrTest {
     @BeforeEach
     public void setUp() {
         open("/ru/feed/");
-        habrPages = new HabrPages(); // Исправить инициализацию
-        habrTeamsPage = new HabrTeamsPage(); // Убрать driver
+        habrPages = new HabrPages();
+        habrTeamsPage = new HabrTeamsPage();
     }
 
     @Test
