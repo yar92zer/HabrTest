@@ -152,31 +152,31 @@ public class HabrTest {
     @Test
     @DisplayName("Проверка активности кнопки Корпоративный блог")
     public void corporateBlogIsActive() {
-        assertTrue(habrPages.getCorporateBlogIsActiv(), "Корпоративный блог кнопка не активна");
+        assertTrue(habrPages.getCorporateBlogIsActive(), "Корпоративный блог кнопка не активна");
     }
 
     @Test
     @DisplayName("Проверка активности кнопки Медийная реклама")
     public void mediaAdvertisingIsActive() {
-        assertTrue(habrPages.getMediaAdvertisingIsActiv(), "Медийная реклам кнопка не активна");
+        assertTrue(habrPages.getMediaAdvertisingIsActive(), "Медийная реклам кнопка не активна");
     }
 
     @Test
     @DisplayName("Проверка активности кнопки Нативные проекты")
     public void nativeProjectsIsActive() {
-        assertTrue(habrPages.getNativeProjectsIsActiv(), "Нативные проекты кнопка не активна");
+        assertTrue(habrPages.getNativeProjectsIsActive(), "Нативные проекты кнопка не активна");
     }
 
     @Test
     @DisplayName("Проверка активности кнопки Образовательные программы")
     public void educationalProgramsIsActive() {
-        assertTrue(habrPages.getEducationalProgramsIsActiv(), "Образовательные программыкнопка не активна");
+        assertTrue(habrPages.getEducationalProgramsIsActive(), "Образовательные программыкнопка не активна");
     }
 
     @Test
     @DisplayName("Проверка активности кнопки Стартапам Стартапам")
     public void startupsIsActive() {
-        assertTrue(habrPages.getStartupsIsActiv(), "Стартапам кнопка не активна");
+        assertTrue(habrPages.getStartupsIsActive(), "Стартапам кнопка не активна");
     }
 
     @Test

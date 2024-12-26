@@ -66,27 +66,27 @@ public class HabrPages {
         return supportButton.isDisplayed();
     }
 
-    public boolean getStartupsIsActiv() {
+    public boolean getStartupsIsActive() {
         LOG.info("Проверка доступности кнопки Стартапам");
         return startupsButton.isDisplayed();
     }
 
-    public boolean getEducationalProgramsIsActiv() {
+    public boolean getEducationalProgramsIsActive() {
         LOG.info("Проверка доступности кнопки Образовательные программы");
         return educationalProgramsButton.isDisplayed();
     }
 
-    public boolean getNativeProjectsIsActiv() {
+    public boolean getNativeProjectsIsActive() {
         LOG.info("Проверка доступности кнопки Нативные проекты");
         return nativeProjectsButton.isDisplayed();
     }
 
-    public boolean getMediaAdvertisingIsActiv() {
+    public boolean getMediaAdvertisingIsActive() {
         LOG.info("Проверка доступности кнопки Медийная реклама");
         return mediaAdvertisingButton.isDisplayed();
     }
 
-    public boolean getCorporateBlogIsActiv() {
+    public boolean getCorporateBlogIsActive() {
         LOG.info("Проверка доступности кнопки Корпоративный блог");
         return corporateBlogButton.isDisplayed();
     }
