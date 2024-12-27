@@ -29,7 +29,7 @@ public class HabrTest {
         Configuration.browser = "chrome";
         Configuration.baseUrl = "https://habr.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.timeout = 10000;
+        Configuration.pageLoadTimeout = 60000;
     }
 
     @BeforeEach
@@ -37,25 +37,25 @@ public class HabrTest {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserVersion", "127.0");
         options.setCapability("selenoid:options", new HashMap<String, Object>() {{
-            /* How to add test badge */
+            *//* How to add test badge *//*
             put("name", "Test badge...");
 
-            /* How to set session timeout */
+            *//* How to set session timeout *//*
             put("sessionTimeout", "15m");
 
             put("enableVNC", "true");
 
-            /* How to set timezone */
+            *//* How to set timezone *//*
             put("env", new ArrayList<String>() {{
                 add("TZ=UTC");
             }});
 
-            /* How to add "trash" button */
+            *//* How to add "trash" button *//*
             put("labels", new HashMap<String, Object>() {{
                 put("manual", "true");
             }});
 
-            /* How to enable video recording */
+            *//* How to enable video recording *//*
             put("enableVideo", true);
         }});
         RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
@@ -69,6 +69,7 @@ public class HabrTest {
     @DisplayName("Проверка активности кнопки Устройство сайта")
     public void siteDeviceIsActive() {
         assertTrue(habrPages.getSiteDeviceIsActive(), "Устройство сайта кнопка не активна");
+
     }
 
     @Test
@@ -122,7 +123,7 @@ public class HabrTest {
     @Test
     @DisplayName("Проверка активности кнопки  Для авторов")
     public void forTheAuthorsIsActive() {
-        assertTrue(habrPages.getForTheAuthorsIsActive(), " Для авторов кнопка кнопка не активна");
+        assertTrue(habrPages.getForTheAuthorsIsActive(), " Для авторов кнопка не активна");
     }
 
     @Test
@@ -170,7 +171,7 @@ public class HabrTest {
     @Test
     @DisplayName("Проверка активности кнопки Образовательные программы")
     public void educationalProgramsIsActive() {
-        assertTrue(habrPages.getEducationalProgramsIsActive(), "Образовательные программыкнопка не активна");
+        assertTrue(habrPages.getEducationalProgramsIsActive(), "Образовательные программы кнопка не активна");
     }
 
     @Test
@@ -182,13 +183,13 @@ public class HabrTest {
     @Test
     @DisplayName("Проверка активности кнопки Техническая поддержка")
     public void supportIsActive() {
-        assertTrue(habrPages.getSupportIsActiv(), "Техническая поддержка кнопка не активна");
+        assertTrue(habrPages.getSupportIsActive(), "Техническая поддержка кнопка не активна");
     }
 
     @Test
     @DisplayName("Проверка активности кнопки Настройка языка")
     public void languageCustomizationIsActive() {
-        assertTrue(habrPages.getLanguageCustomIsActiv(), "Настройка языка кнопка не активна");
+        assertTrue(habrPages.getLanguageCustomIsActive(), "Настройка языка кнопка не активна");
     }
 
     @Test
@@ -224,6 +225,4 @@ public class HabrTest {
         String actualUrl = habrTeamsPage.getSendTeamTransition();
         assertEquals(expectedUrl, actualUrl, "Итоговый URL не соответствует ожидаемому");
     }
-
-
 }
