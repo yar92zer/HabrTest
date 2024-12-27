@@ -35,34 +35,38 @@ public class HabrTest {
     @BeforeEach
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
+        open("/ru/feed/");
+        habrPages = new HabrPages();
+        habrTeamsPage = new HabrTeamsPage();
         options.setCapability("browserVersion", "127.0");
         options.setCapability("selenoid:options", new HashMap<String, Object>() {{
             //* How to add test badge *//*
             put("name", "Test badge...");
 
+
             //* How to set session timeout *//*
             put("sessionTimeout", "15m");
 
+
             put("enableVNC", "true");
+
 
             //* How to set timezone *//*
             put("env", new ArrayList<String>() {{
                 add("TZ=UTC");
             }});
 
+
             //* How to add "trash" button *//*
             put("labels", new HashMap<String, Object>() {{
                 put("manual", "true");
             }});
 
+
             //* How to enable video recording *//*
             put("enableVideo", true);
         }});
         RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
-        open("/ru/feed/");
-
-        habrPages = new HabrPages();
-        habrTeamsPage = new HabrTeamsPage();
     }
 
     @Test
@@ -195,7 +199,7 @@ public class HabrTest {
     @Test
     @DisplayName("Открытие страницы Устройство сайта")
     public void siteDeviceTest() {
-        String expectedUrl = "https://habr.com/ru/docs/help/";
+        String expectedUrl = "https://habr.com/ru/docs/help/rules/";
         String actualUrl = habrPages.siteDeviceTransition();
         assertEquals(expectedUrl, actualUrl, "Итоговый URL не соответствует ожидаемому");
     }

@@ -168,7 +168,7 @@ public class HabrPages {
         LOG.info("Переход на страницу Устройство сайта");
         siteDeviceButton.shouldBe(visible);
         siteDeviceButton.click();
-        sleep(1000);
+        sleep(10000);
         return webdriver().driver().url();
     }
 }
