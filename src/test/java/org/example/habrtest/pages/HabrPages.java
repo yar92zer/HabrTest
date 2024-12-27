@@ -55,111 +55,111 @@ public class HabrPages {
     private final SelenideElement languageCustomizationButton = $x("//button[@class='tm-footer__link']");
 
 
-    public boolean getLanguageCustomIsActiv() {
-        LOG.info("Проверка доступности кнопки Настройка языка");
+    public boolean getLanguageCustomIsActive() {
+        LOG.info("Проверка видимости кнопки Настройка языка");
         return languageCustomizationButton.isDisplayed();
     }
 
 
-    public boolean getSupportIsActiv() {
-        LOG.info("Проверка доступности кнопки Техническая поддержка");
+    public boolean getSupportIsActive() {
+        LOG.info("Проверка видимости кнопки Техническая поддержка");
         return supportButton.isDisplayed();
     }
 
     public boolean getStartupsIsActive() {
-        LOG.info("Проверка доступности кнопки Стартапам");
+        LOG.info("Проверка видимости кнопки Стартапам");
         return startupsButton.isDisplayed();
     }
 
     public boolean getEducationalProgramsIsActive() {
-        LOG.info("Проверка доступности кнопки Образовательные программы");
+        LOG.info("Проверка видимости кнопки Образовательные программы");
         return educationalProgramsButton.isDisplayed();
     }
 
     public boolean getNativeProjectsIsActive() {
-        LOG.info("Проверка доступности кнопки Нативные проекты");
+        LOG.info("Проверка видимости кнопки Нативные проекты");
         return nativeProjectsButton.isDisplayed();
     }
 
     public boolean getMediaAdvertisingIsActive() {
-        LOG.info("Проверка доступности кнопки Медийная реклама");
+        LOG.info("Проверка видимости кнопки Медийная реклама");
         return mediaAdvertisingButton.isDisplayed();
     }
 
     public boolean getCorporateBlogIsActive() {
-        LOG.info("Проверка доступности кнопки Корпоративный блог");
+        LOG.info("Проверка видимости кнопки Корпоративный блог");
         return corporateBlogButton.isDisplayed();
     }
 
 
     public boolean getPrivacyIsActive() {
-        LOG.info("Проверка доступности кнопки Конфиденциальность");
+        LOG.info("Проверка видимости кнопки Конфиденциальность");
         return privacyButton.isDisplayed();
     }
 
     public boolean getAgreementIsActive() {
-        LOG.info("Проверка доступности кнопки Соглашение");
+        LOG.info("Проверка видимости кнопки Соглашение");
         return agreementButton.isDisplayed();
     }
 
     public boolean getPapersIsActive() {
-        LOG.info("Проверка доступности кнопки Документы");
+        LOG.info("Проверка видимости кнопки Документы");
         return papersButton.isDisplayed();
     }
 
     public boolean getForCompaniesIsActive() {
-        LOG.info("Проверка доступности кнопки Для компаний");
+        LOG.info("Проверка видимости кнопки Для компаний");
         return forCompaniesButton.isDisplayed();
     }
 
 
     public boolean getForTheAuthorsIsActive() {
-        LOG.info("Проверка доступности кнопки Для авторов");
+        LOG.info("Проверка видимости кнопки Для авторов");
         return forTheAuthorsButton.isDisplayed();
     }
 
     public boolean getSandboxIsActive() {
-        LOG.info("Проверка доступности кнопки Песочница");
+        LOG.info("Проверка видимости кнопки Песочница");
         return sandboxButton.isDisplayed();
     }
 
     public boolean getAuthorsIsActive() {
-        LOG.info("Проверка доступности кнопки Авторы");
+        LOG.info("Проверка видимости кнопки Авторы");
         return authorsButton.isDisplayed();
     }
 
     public boolean getCompaniesIsActive() {
-        LOG.info("Проверка доступности кнопки Компании ");
+        LOG.info("Проверка видимости кнопки Компании ");
         return companiesButton.isDisplayed();
     }
 
     public boolean getNewsIsActive() {
-        LOG.info("Проверка доступности кнопки Новости");
+        LOG.info("Проверка видимости кнопки Новости");
         return newsButton.isDisplayed();
     }
 
     public boolean getArticlesIsActive() {
-        LOG.info("Проверка доступности кнопки Статьи");
+        LOG.info("Проверка видимости кнопки Статьи");
         return articlesButton.isDisplayed();
     }
 
     public boolean getRegistrationIsActive() {
-        LOG.info("Проверка доступности кнопки Регистрация");
+        LOG.info("Проверка видимости кнопки Регистрация");
         return registrationButton.isDisplayed();
     }
 
     public boolean getSendHubIsActive() {
-        LOG.info("Проверка доступности кнопки Войти");
+        LOG.info("Проверка видимости кнопки Войти");
         return sendHubButton.isDisplayed();
     }
 
     public boolean getSiteDeviceIsActive() {
-        LOG.info("Проверка доступности кнопки Устройство сайта");
+        LOG.info("Проверка видимости кнопки Устройство сайта");
         return siteDeviceButton.isDisplayed();
     }
 
     public boolean getHubsIsActive() {
-        LOG.info("Проверка доступности кнопки Хабы");
+        LOG.info("Проверка видимости кнопки Хабы");
         return hubsButton.isDisplayed();
     }
 
